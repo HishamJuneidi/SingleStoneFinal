@@ -1,0 +1,15 @@
+2020-06-13 23:50:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" not found; SQL statement:
+select * from test [42102-193]
+2020-06-13 23:53:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE TEST:[*]"; SQL statement:
+DROP TABLE TEST: [42000-193]
+2020-06-13 23:53:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEST (
+ID INT AUTO[*]-INCREMENT PRIMARY KEY,
+TEST_MSG VARCHAR(50) NOT NULL
+) "; expected "(, FOR, UNSIGNED, NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE test (
+id INT AUTO-INCREMENT PRIMARY KEY,
+test_msg VARCHAR(50) NOT NULL
+) [42001-193]
